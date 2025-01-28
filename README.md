@@ -168,6 +168,10 @@ Simply put, this downloads the file as a temp file, we load it in with `TextFile
 
 Why do we want to support streaming? What about streaming is important, or useful?
 
+#### Answer
+Streaming is useful because it enhances user experience by providing real-time feedback, reducing perceived latency, and making systems feel more responsive. It improves efficiency by processing data incrementally, enables scalability in real-time applications, and allows users to refine queries or stop processing early. Streaming fosters transparency, builds trust, and is ideal for generating long-form or creative content. In Retrieval-Augmented Question and Answer, it keeps users engaged by showing progress as the response is generated.
+
+
 ### On Chat Start:
 
 The next scope is where "the magic happens". On Chat Start is when a user begins a chat session. This will happen whenever a user opens a new chat window, or refreshes an existing chat window.
@@ -209,6 +213,9 @@ Now, we'll save that into our user session!
 #### ❓ QUESTION #2: 
 
 Why are we using User Session here? What about Python makes us need to use this? Why not just store everything in a global variable?
+
+#### Answer :
+We use user sessions to isolate user-specific data, ensuring privacy and preventing conflicts in a multi-user environment. Python's concurrency model (e.g., threads or async) makes global variables unsafe due to potential race conditions and data corruption. Sessions are scalable, secure, and maintainable, whereas global variables can lead to unpredictable behavior in concurrent or multi-request systems.
 
 ### On Message
 
